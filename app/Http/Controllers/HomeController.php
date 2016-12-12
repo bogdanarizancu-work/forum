@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Group;
+use App\User;
+use App\Post;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -14,6 +18,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        Carbon::setLocale('ro');
     }
 
     /**
@@ -21,11 +26,23 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($groupId = 0)
     {
         // get groups
+        $groups = Group::all();
+
+        // get groups
+        $users = User::all();
+
+        // get posts
+        if ($groupId)
+        {
+            $posts = Post::with('author')->whereGroupId($groupId)->get();
+        } else {
+            $posts = Post::with('author')->get();
+        }
 
         // return view
-        return view('home');
+        return view('home', compact('groups', 'users', 'posts'));
     }
 }

@@ -22,3 +22,22 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+// create fake groups
+$factory->define(App\Group::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->streetName,
+        'slug' => $faker->unique()->slug,
+        'created_by' => App\User::all()->random()->id
+    ];
+});
+
+
+// create fake posts
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
+    return [
+        'content' => $faker->text,
+        'user_id' => App\User::all()->random()->id,
+        'group_id' => App\Group::all()->random()->id
+    ];
+});
