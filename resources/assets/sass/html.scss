@@ -1,0 +1,35 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Bootstrap
+/* @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"; */
+
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "bower_components/bootswatch-sass/sandstone/variables";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "bower_components/bootswatch-sass/sandstone/bootswatch";
+
+.navbar-default {
+    border-color: #ccc;
+}
+
+.logo-image {
+    width: 28px;
+    float: left;
+    margin-right: 10px;
+}
+
+.thread-content {
+    textarea {
+        width: 100%;
+        border-radius: 3px;
+        padding: 10px;
+        font-size: $font-size-base;
+    }
+}
+
+.groups-list {
+    a.active {
+        font-weight: 600;
+    }
+}

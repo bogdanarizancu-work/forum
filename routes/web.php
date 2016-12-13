@@ -11,11 +11,14 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/profile', 'ProfileController@index');
 
-Route::get('/{groupId?}','HomeController@index');
 
-Auth::routes();
 
 Route::get('/home/{groupId?}', 'HomeController@index');
 
+Route::get('/html', 'HtmlController@index');
+
+Route::get('/{groupId?}','HomeController@index');

@@ -18,7 +18,7 @@
 
                     <!-- Individual groups -->
                     @foreach ($groups as $group)
-                        @include('groups.groupItem', compact('group'))
+                        @include('components.groups.groupItem', compact('group'))
                     @endforeach
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 <!-- Individual groups -->
                 <ul class="list-group">
                     @foreach ($posts as $post)
-                        @include('posts.postItem', compact('post'))
+                        @include('components.posts.postItem', compact('post'))
                     @endforeach
                 </ul>
             </div>
@@ -57,7 +57,7 @@
                 <div class="panel-body groups-list">
                     <!-- Individual user -->
                     @foreach ($users as $user)
-                        @include('users.userItem', compact('user'))
+                        @include('components.users.userItem', compact('user'))
                     @endforeach
                 </div>
             </div>
