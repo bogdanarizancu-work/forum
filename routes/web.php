@@ -16,9 +16,10 @@ Auth::routes();
 Route::get('/profile', 'ProfileController@index');
 
 
-
 Route::get('/home/{groupId?}', 'HomeController@index');
 
 Route::get('/html', 'HtmlController@index');
 
 Route::get('/{groupId?}','HomeController@index');
+
+Route::post('/upload-file','UploadController@upload')->name('upload-file');

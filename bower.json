@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootswatch-sass": "^3.3.1"
+    "bootswatch-sass": "^3.3.1",
+    "dropzone": "^4.3.0"
   }
 }

@@ -4,10 +4,13 @@
 // Bootstrap
 /* @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"; */
 
-@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
-@import "bower_components/bootswatch-sass/sandstone/variables";
-@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "bower_components/bootswatch-sass/sandstone/bootswatch";
+@import "resources/assets/bower/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "resources/assets/bower/bootswatch-sass/sandstone/variables";
+@import "resources/assets/bower/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "resources/assets/bower/bootswatch-sass/sandstone/bootswatch";
+
+
+// import dropzone
 
 .navbar-default {
     border-color: #ccc;
@@ -32,4 +35,8 @@
     a.active {
         font-weight: 600;
     }
+}
+
+.modal {
+    z-index: 1050;
 }
