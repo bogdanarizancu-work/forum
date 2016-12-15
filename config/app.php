@@ -231,7 +231,8 @@ return [
 
         'Form'      => Collective\Html\FormFacade::class,
         'HTML'      => Collective\Html\HtmlFacade::class,
-        'Image'     => Intervention\Image\Facades\Image::class
+        'Image'     => Intervention\Image\Facades\Image::class,
+        'Input'     => 'Illuminate\Support\Facades\Input'
 
     ],
 

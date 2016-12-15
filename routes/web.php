@@ -22,4 +22,4 @@ Route::get('/html', 'HtmlController@index');
 
 Route::get('/{groupId?}','HomeController@index');
 
-Route::post('/upload-file','UploadController@upload')->name('upload-file');
+Route::post('/upload-single-file','UploadController@uploadSingleFile')->name('upload-file');

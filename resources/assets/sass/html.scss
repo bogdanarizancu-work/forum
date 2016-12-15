@@ -10,10 +10,22 @@
 @import "resources/assets/bower/bootswatch-sass/sandstone/bootswatch";
 
 
-// import dropzone
+input,
+textarea {
+    &:focus {
+        outline: 0;
+    }
+}
 
 .navbar-default {
     border-color: #ccc;
+}
+.nav-profile-thumbnail {
+    padding: 10px 16px!important;
+    img {
+        border-radius: 40%;
+        margin-right: 10px;
+    }
 }
 
 .logo-image {
@@ -28,15 +40,26 @@
         border-radius: 3px;
         padding: 10px;
         font-size: $font-size-base;
+        border: 2px dashed #ddd;
     }
 }
 
 .groups-list {
     a.active {
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 
 .modal {
     z-index: 1050;
+}
+
+.upload {
+    cursor: pointer;
+    border: 2px dashed #ccc;
+    text-align: center;
+}
+
+.fs-12 {
+    font-size: 12px;
 }
